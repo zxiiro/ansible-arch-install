@@ -1,0 +1,7 @@
+---
+- name: This is a hello-world example
+  hosts: localhost
+  tasks:
+    - name: Hello World
+      copy: content="Hello World\n" dest=/tmp/test.txt
+
