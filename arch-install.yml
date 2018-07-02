@@ -1,7 +1,9 @@
 ---
-- name: This is a hello-world example
+- name: Install Arch Linux from an Arch ISO
   hosts: localhost
   tasks:
-    - name: Hello World
-      copy: content="Hello World\n" dest=/tmp/test.txt
+    - name: Check internet connectivity
+      wait_for:
+        host: archlinux.org
+        port: 80
 
