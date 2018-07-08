@@ -1,6 +1,6 @@
+mount -o remount,size=1G /run/archiso/cowspace
 pacman -Syu
 pacman -S ansible git
 git clone git@github.com:zxiiro/ansible-arch-install.git
 cd ansible-arch-install
 ansible-playbook arch-install.yml
-
