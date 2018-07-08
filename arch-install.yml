@@ -7,3 +7,11 @@
         host: archlinux.org
         port: 80
 
+    - name: Enable ntp
+      command: /usr/bin/timedatectl set-ntp true
+
+    - name: Enable ntp
+      command: /usr/bin/timedatectl status
+      register: ntp
+    - debug: msg="{{ ntp.stdout }}"
+    - debug: msg="{{ ntp.stderr }}"
